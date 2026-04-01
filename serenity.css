@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0e8b6aa1;
+}
+
+/* Navigation */
+
+header{
+    /*background:#0e8b6aa1;*/
+    padding:25px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#fff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hero Section */
+
+.hero{
+   /* text-align:center;
+    padding:200px 20px;
+    background:url("bg1.jpg") center/cover;*/
+    color:rgb(255, 255, 255);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slides */
+.slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+/* Active slide */
+.slide.active{
+    opacity:1;
+}
+
+/* Overlay */
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    top:0;
+    left:0;
+}
+
+/* Content */
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.hero h2{
+    font-size:40px;
+}
+
+.hero p{
+    margin:20px 0;
+}
+
+.hero button{
+    padding:10px 20px;
+    border:none;
+    background:#ff7b54;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    
+}
+
+/* Products */
+
+.products{
+    padding:50px;
+    text-align:center;
+}
+
+.product-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+}
+
+.product{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    width:250px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* About */
+
+.about{
+    padding:50px;
+    text-align:center;
+    background:#ffe8d6;
+}
+
+/* Contact */
+
+.contact{
+    padding:50px;
+    text-align:center;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#333;
+    color:white;
+}
+

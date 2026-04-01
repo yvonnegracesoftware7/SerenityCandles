@@ -1,0 +1,107 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#fff8f0;
+    margin:0;
+    background: url('Additional_Candles/productbg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+ 
+
+header{
+    background:#5a3e36;
+    color:white;
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+header h1{
+    text-align:center;
+    grid-column:2;
+}
+nav{
+    grid-column:3;
+    justify-self:end;
+}
+
+.contact-container{
+    width:80%;
+    max-width:600px;
+    margin:auto;
+    margin-top:40px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.contact-details{
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input, textarea{
+    margin:10px 0;
+    padding:12px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+button{
+    background:#ff914d;
+    border:none;
+    padding:12px;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff6a00;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+nav ul li a:hover{
+    color:#ff914d;
+}
+
+footer{
+    background:#5a3e36;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+
+
+
+

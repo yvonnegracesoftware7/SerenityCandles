@@ -1,0 +1,84 @@
+body{
+     font-family: Arial, sans-serif;
+     background:#fff8f0;
+     margin:0;
+     background: url('Additional_Candles/productbg.png') no-repeat center center fixed;
+     background-size: cover;
+}
+
+header{
+    background:#5a3e36;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    margin:0;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    margin:0;
+    padding:0;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#ff914d;
+}
+
+.about-container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.about-container h2{
+    color:#5a3e36;
+    margin-bottom:20px;
+}
+
+.about-container p{
+    line-height:1.7;
+    margin-bottom:20px;
+    color:#444;
+}
+
+.team{
+    margin-top:40px;
+}
+
+.team-member{
+    display:inline-block;
+    width:200px;
+    margin:20px;
+    vertical-align:top;
+}
+
+.team-member img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#5a3e36;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}

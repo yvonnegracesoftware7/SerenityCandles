@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0.5%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 80px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #002350;
+    font-size: 30px;
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+    color: #ff69b4; /* Change text color to pink */
+    transition: 0.3s; /* Smooth fade effect */
+}
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 80px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.content p{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 20;
+}
+
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+/* Add this to your CSS file */
+
+.content a:hover {
+    background-color: #ff69b4; /* This is a Hot Pink color */
+    color: #fff;               /* Keeps the text white */
+    border-color: #ff69b4;     /* Matches the border to the background */
+    transition: 0.4s;          /* Makes the color change smooth */
+}
+
+/*.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}*/
+
+.back-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media(max-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+/*Product*/
+.products{
+    padding:50px;
+    text-align:center;
+    color: #4601cf;
+}
+
+.product-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+}
+
+.product{
+    background:rgb(2, 255, 230);
+    padding:15px;
+    border-radius:10px;
+    width:250px;
+    box-shadow:0 0 10px rgba(26, 7, 233, 0.186);
+}
+
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#11b7c9;
+    color:white;
+}
+
+/* Serenity logo 
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    mix-blend-mode: multiply;
+}
+
+.logo {
+    
+    height: 120px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+*/
+
+/* Serenity logo - Updated Size 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    mix-blend-mode: multiply;*/
+   /*  height: 180px; Increased from 120px */
+    /*width: 180px;    Keeps the aspect ratio perfect */
+    /*filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+    transition: 0.3s; /* Optional: makes it feel smooth if you change it later 
+}
+*/
+/* Serenity logo - Updated Width and Height */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    mix-blend-mode: multiply;
+    
+    /* Adjust these values to find your perfect size */
+    height: 100%;        /* Allows the height to scale with the width */
+    width: 100%;        /* Increased from the default size */
+    max-width: 100%;     /* Prevents it from going off-screen on phones */
+    
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
