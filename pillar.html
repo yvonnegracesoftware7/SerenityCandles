@@ -23,14 +23,47 @@
     <!-- Right Details -->
     <div class="product-details">
         <h2>Ribbed Pillar Candle</h2>
-        <p class="price">R180</p>
-      <label>Color</label>
+        <p class="price" id="productPrice">R220</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
        <div class="options" id="ColorOptions">
            <button onclick="changeColor('Ribbed_pillar/gold.png')">Gold</button>
            <button onclick="changeColor('Ribbed_pillar/pink.png')">Pink</button>
            <button onclick="changeColor('Ribbed_pillar/purple.png')">Purple</button>
            <button onclick="changeColor('Ribbed_pillar/green.png')">Green</button>
     
+             <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('As a set', 220, this)">For Set</button>
+           
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Set</span>
+      </p>
 
         <div class="description">
             <h3>Description</h3>

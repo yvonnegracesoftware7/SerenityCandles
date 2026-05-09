@@ -23,8 +23,20 @@
     <!-- Right Details -->
     <div class="product-details">
         <h2>Modern Ribbed Wave Candle</h2>
-        <p class="price">R180</p>
-      <label>Color</label>
+        <p class="price" id="productPrice">R30</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
     <div class="options" id="ColorOptions">
        <button onclick="changeColor('Ribbed_Wave/red.png')">Red</button>
        <button onclick="changeColor('Ribbed_Wave/pink.png')">Pink</button>
@@ -32,10 +44,32 @@
        <button onclick="changeColor('Ribbed_Wave/green.png')">Green</button>
     
 
+       <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 30, this)">Small</button>
+           <button onclick="changeSize('Medium', 60, this)">Medium</button>
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
+      
         <div class="description">
             <h3>Description</h3>
             <p>
-                A contemporary candle featuring a flowing ribbed wave design that adds movement and elegance to any space.
+                 A contemporary candle featuring a flowing ribbed wave design that adds movement and elegance to any space.
                  Its sculptural look makes it a stylish décor piece, while its soft glow creates a warm and calming atmosphere.
             </p>
         </div>

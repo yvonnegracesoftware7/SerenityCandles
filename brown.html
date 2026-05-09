@@ -22,20 +22,53 @@
 
     <!-- Right Details -->
     <div class="product-details">
-        <h2>Serenity Jar Candle</h2>
-        <p class="price">R180</p>
-      <label>Color</label>
+        <h2>Vanilla Candle</h2>
+        <p class="price" id="productPrice">R65</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
     <div class="options" id="ColorOptions">
        <button onclick="changeColor('Brown_Candle/blue.png')">Blue</button>
        <button onclick="changeColor('Brown_Candle/green.png')">Green</button>
        <button onclick="changeColor('Brown_Candle/pink.png')">Pink</button>
        <button onclick="changeColor('Brown_Candle/purple.png')">Purple</button>
     
+        <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 65, this)">Small</button>
+           <button onclick="changeSize('Large', 70, this)">Large</button>
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
 
         <div class="description">
             <h3>Description</h3>
             <p>                
-                Create a calming and cozy atmosphere with our Warm Serenity Jar Candle.
+                 Create a calming and cozy atmosphere with our Warm Serenity Jar Candle.
                  Hand-poured into a sleek glass container, this candle offers a soft, 
                  steady glow that instantly transforms any space into a peaceful retreat. 
                  Its clean-burning wax and gentle flicker provide the perfect ambiance for relaxation, 

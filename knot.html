@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Candles</title>
+<link rel="stylesheet" href="Product.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Serenity Candles</h1>
+</header>
+
+<section class="product-page">
+
+    <!-- Left Image -->
+    <div class="product-image">
+        <img src="Knot_Candles/knot_candles.png" id="mainCandle" alt="Candle">
+    </div>
+
+    <!-- Right Details -->
+    <div class="product-details">
+        <h2>Knot Candle</h2>
+        <p class="price" id="productPrice">R50</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
+       <div class="options" id="ColorOptions">
+           <button onclick="changeColor('Knot_Candles/knot_candles.png')">Knot Candle</button>
+
+
+           <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 50, this)">Small</button>
+           <button onclick="changeSize('Medium', 100, this)">Medium</button>
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+        
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
+
+        <div class="description">
+            <h3>Description</h3>
+            <p>
+                These elegant oversized knot candles feature a modern ribbed design with a unique twisted center that adds a luxurious and artistic touch. Crafted in soft neutral tones such as ivory, 
+                blush pink, beige, grey, and nude brown, they create a warm and stylish aesthetic perfect for home décor, gifting, and special occasions. Their tall sculptural shape makes them ideal as statement pieces for living rooms,
+                 bedrooms, weddings, and minimalist interior spaces. Both decorative and functional, these candles bring sophistication, calmness, and beauty to any setting.
+            </p>
+        </div>
+    </div>
+
+</section>
+<script src="Product.js"></script>
+</body>
+</html>

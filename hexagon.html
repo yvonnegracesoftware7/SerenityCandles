@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Candles</title>
+<link rel="stylesheet" href="Product.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Serenity Candles</h1>
+</header>
+
+<section class="product-page">
+
+    <!-- Left Image -->
+    <div class="product-image">
+        <img src="Hexagon/pink.png" id="mainCandle" alt="Candle">
+    </div>
+
+    <!-- Right Details -->
+    <div class="product-details">
+        <h2>Hexagon Candle</h2>
+        <p class="price" id="productPrice">R40</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
+       <div class="options" id="ColorOptions">
+           <button onclick="changeColor('Hexagon/blue.png')">Blue</button>
+           <button onclick="changeColor('Hexagon/pink.png')">Pink</button>
+           <button onclick="changeColor('Hexagon/purple.png')">Purple</button>
+           <button onclick="changeColor('Hexagon/white.png')">White</button>
+    
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+
+        <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 40, this)">Small</button>
+           <button onclick="changeSize('Large', 40, this)">Large</button>
+       </div>
+
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
+
+        <div class="description">
+            <h3>Description</h3>
+            <p>
+                 These elegant geometric candle holders feature a modern faceted design with a sleek polygon shape that adds a luxurious and contemporary touch to any space.
+                 Crafted in a smooth white finish, they offer a clean, minimalist aesthetic perfect for modern home décor, weddings, table centerpieces, and stylish gift sets. 
+                 Their unique sculptural form makes them ideal as statement décor pieces for living rooms, bedrooms, offices, and special events.
+                 Both decorative and functional, these candle holders bring sophistication, simplicity, and timeless beauty to any setting.
+            </p>
+        </div>
+    </div>
+
+</section>
+<script src="Product.js"></script>
+</body>
+</html>

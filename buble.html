@@ -22,15 +22,49 @@
 
     <!-- Right Details -->
     <div class="product-details">
-        <h2>Serenity Bubble Candle</h2>
-        <p class="price">R180</p>
-      <label>Color</label>
+        <h2>Bubble Candle</h2>
+        <p class="price" id="productPrice">R30</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
        <div class="options" id="ColorOptions">
            <button onclick="changeColor('Bubble_Cube/blue.png')">Blue</button>
            <button onclick="changeColor('Bubble_Cube/pink.png')">Pink</button>
            <button onclick="changeColor('Bubble_Cube/purple.png')">Purple</button>
            <button onclick="changeColor('Bubble_Cube/red.png')">Red</button>
     
+
+        <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 30, this)">Small</button>
+           <button onclick="changeSize('Medium', 50, this)">Medium</button>
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
 
         <div class="description">
             <h3>Description</h3>

@@ -23,8 +23,20 @@
     <!-- Right Details -->
     <div class="product-details">
         <h2>Sculptural Pillar Candles</h2>
-        <p class="price">R180</p>
-      <label>Color</label>
+        <p class="price" id="productPrice">R180</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
        <div class="options" id="ColorOptions">
            <button onclick="changeColor('Sculptural_Pillar/pink.png')">Pink</button>
            <button onclick="changeColor('Sculptural_Pillar/sky_blue.png')">Sky Blue</button>
@@ -32,10 +44,32 @@
            <button onclick="changeColor('Sculptural_Pillar/white.png')">White</button>
     
 
+           <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 180, this)">Small</button>
+           <button onclick="changeSize('Medium', 250, this)">Medium</button>
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
+
         <div class="description">
             <h3>Description</h3>
             <p>
-                Artistic and modern, Sculptural Pillar Candles are designed to double as décor pieces with their
+                 Artistic and modern, Sculptural Pillar Candles are designed to double as décor pieces with their
                  unique shapes and forms. They add elegance and character to any space while providing a soft, 
                  warm glow for a cozy and stylish atmosphere.
             </p>

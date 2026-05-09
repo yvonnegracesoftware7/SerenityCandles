@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Candles</title>
+<link rel="stylesheet" href="Product.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Serenity Candles</h1>
+</header>
+
+<section class="product-page">
+
+    <!-- Left Image -->
+    <div class="product-image">
+        <img src="Small_Spiral/white.png" id="mainCandle" alt="Candle">
+    </div>
+
+    <div class="product-details">
+    <h2>Small Spiral Candle</h2>
+
+    <!-- Dynamic Price -->
+    <p class="price" id="productPrice">R40</p>
+
+    <!-- Color Selection -->
+    <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
+    <div class="options" id="ColorOptions">
+        <button onclick="changeColor('Small_Spiral/white.png')">White</button>
+        <button onclick="changeColor('Small_Spiral/pink.png')">Pink</button>
+        <button onclick="changeColor('Small_Spiral/purple.png')">Purple</button>
+        <button onclick="changeColor('Small_Spiral/blue.png')">Blue</button>
+    </div>
+
+<!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+  
+
+    <!-- Description -->
+    <div class="description">
+        <h3>Description</h3>
+        <p>
+            A sophisticated set of candles featuring clean lines and architectural shapes 
+            in a soft cream finish. Designed to elevate any space, they serve as both 
+            elegant décor pieces and sources of a warm, ambient glow.
+        </p>
+    </div>
+</div>
+
+</section>
+<script src="Product.js"></script>
+</body>
+</html>

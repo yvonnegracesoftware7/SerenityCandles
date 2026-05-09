@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Candles</title>
+<link rel="stylesheet" href="Product.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Serenity Candles</h1>
+</header>
+
+<section class="product-page">
+
+    <!-- Left Image -->
+    <div class="product-image">
+        <img src="RainDrop_Candle/white.jpeg" id="mainCandle" alt="Candle">
+    </div>
+
+    <!-- Right Details -->
+    <div class="product-details">
+        <h2>Rain Dropped Candle</h2>
+        <p class="price" id="productPrice">R60</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
+       <div class="options" id="ColorOptions">
+           <button onclick="changeColor('RainDrop_Candle/white.jpeg')">White</button>
+           <button onclick="changeColor('RainDrop_Candle/pink.png')">Pink</button>
+           <button onclick="changeColor('RainDrop_Candle/purple.png')">Purple</button>
+           <button onclick="changeColor('RainDrop_Candle/Blue.png')">Blue</button>
+           
+        <label>Size</label>
+        <div class="options" id="sizeOptions">
+           <button onclick="changeSize('Small', 60, this)">Small</button>
+           <button onclick="changeSize('Large', 100, this)">Large</button>
+       </div>
+
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Lavender')">Lavender</button>
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+        
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
+
+        <div class="description">
+            <h3>Description</h3>
+            <p>
+                 This candle has a modern, Rain Dropped design that immediately stands out.
+                 It features a braided or twisted pattern, where thick, rounded strands of wax are interwoven to create a textured, almost woven look. 
+                 The shape is compact and cylindrical, with a softly rounded top and a centered wick.<br><br>
+
+                 The surface is smooth and matte, giving it a clean, elegant finish, while the purple tone adds a calming, luxurious feel.
+                 The intricate twists catch light and shadow beautifully, highlighting the depth and craftsmanship of the design.
+            </p>
+        </div>
+    </div>
+
+</section>
+<script src="Product.js"></script>
+</body>
+</html>

@@ -22,9 +22,21 @@
 
     <!-- Right Details -->
     <div class="product-details">
-        <h2>Serenity Scents</h2>
-        <p class="price">R180</p>
-      <label>Color</label>
+        <h2>Lavender Scented Candle</h2>
+        <p class="price" id="productPrice">R40</p>
+      <!-- Color Selection -->
+    <label class="color-label">Color
+         <button class="guess-btn" onclick="showColorsMessage()">Guess What!</button>
+     </label>
+
+<!-- POPUP MODAL -->
+<div id="colorPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>🎨 Surprise!</h2>
+        <p>All colours are available ✨</p>
+    </div>
+</div>
        <div class="options" id="ColorOptions">
            <button onclick="changeColor('Lavender_Scented/blue.png')">Blue</button>
            <button onclick="changeColor('Lavender_Scented/pink.png')">Pink</button>
@@ -32,14 +44,30 @@
            <button onclick="changeColor('Lavender_Scented/green.png')">Green</button>
     
 
+             <label>Size</label>
+           <div class="options" id="sizeOptions">
+                <button onclick="changeSize('Small', 40, this)">Small</button>
+               <button onclick="changeSize('Large', 80, this)">Large</button>
+          </div>
+       <!-- Scents Selection -->
+       <label>Available Scents</label>
+       <div class="options" id="scentOptions">
+             <button onclick="selectScent(this, 'Jasmine Flavour')">Jasmine Flavour</button>
+             <button onclick="selectScent(this, 'Sakura Taste')">Sakura Taste</button>
+             <button onclick="selectScent(this, 'Rose Flavour')">Rose Flavour</button>
+        </div>
+        <p class="selected-size" id="selectedScent">Selected scent: None</p>
+       <!-- Selected Size Display -->
+      <p class="selected-size">
+          <strong>Selected Size:</strong>
+          <span id="selectedSize">Small</span>
+      </p>
+
         <div class="description">
             <h3>Description</h3>
             <p>
-                The <strong>Serenity Scents by T&N</strong> Signature Series is 
-                crafted for those who appreciate understated luxury. Featuring 
-                our custom-branded glass vessel and premium white soy-blend wax, 
-                this candle provides a sophisticated scent throw that fills your 
-                space without overwhelming it.
+                 A lavender-scented candle is a staple of aromatherapy, designed to transform a space into a serene, spa-like sanctuary.
+                 It is widely prized for its clean, herbal, and timelessly floral profile.
             </p>
         </div>
     </div>
